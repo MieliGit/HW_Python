@@ -9,8 +9,7 @@ n = int(input("Введите число: "))
 sum = 0
 
 while n > 0:
-    a = n % 10
-    sum = sum + a
+    sum += n % 10
     n = n // 10
 
 print(f"Сумма чисел в числе = {sum}")
