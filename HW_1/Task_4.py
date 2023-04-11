@@ -11,7 +11,7 @@
 n = int(input("Введите сколько журавликов было сделано "))
 
 if n%2 == 0:
-    x = (n // 3)
+    x = n // 3
     Kate = n - x
     Peter = x//2
     Sergei = Peter
