@@ -10,7 +10,7 @@
 n = int(input("Введите длину в дольках: "))
 m = int(input("Введите ширину в дольках: "))
 k = int(input("Сколько долик хотите отломить: "))
-if k < n * m and ((k % n == 0) or (k % m == 0)):
+if k < n * m and (k % n == 0 or k % m == 0):
     print(f"{n} {m} {k} -> yes")
 else:
     print(f"{n} {m} {k} -> no")
