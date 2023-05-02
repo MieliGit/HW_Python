@@ -5,13 +5,15 @@
 # A = 3; B = 5 -> 243 (3⁵)
 #     A = 2; B = 3 -> 8 
 
-def multi(a, b):
-    x = a
-    for i in range(1, b):
-        a *= x
+def multi1(a, b):
+    a *= x
+    b -= 1
+    if b > 1:
+        return multi1(a, b)
     return a
 
-n = int(input("Введите число возводимое в степень: "))
-m = int(input("Введите степень, в которое возводится число: "))
+n = x = int(input("Введите число, которое хотите возвести в степень: "))
 
-print(f"Число {n} в степени {m} = {multi(n, m)}")
+m = int(input("Введите степень: "))
+
+print(multi1(n,m))

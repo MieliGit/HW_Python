@@ -6,9 +6,11 @@
 # 2 2
 #  4 
 
+
 def sum1(a, b):
-    for i in range(1, b+1):
-        a += 1
+    
+    for i in range(1, b):
+        a *= 1
     return a
 
 n = int(input("Введите первое число: "))
