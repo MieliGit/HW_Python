@@ -8,12 +8,14 @@
 
 
 def sum1(a, b):
-    
-    for i in range(1, b):
-        a *= 1
+    a += 1
+    b -= 1  
+    if b > 0:
+        return sum1(a, b)
     return a
 
 n = int(input("Введите первое число: "))
+
 m = int(input("Введите второе число: "))
 
-print(f"{n} + {m} = {sum1(n, m)}")
+print(sum1(n,m))
