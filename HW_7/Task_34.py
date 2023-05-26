@@ -16,8 +16,7 @@ def rhythm(ver, vow):
     for syl in ver:
         sum_syl = 0
         for i in syl:
-            if i in vow:
-                sum_syl += 1
+            sum_syl += i in vow
         list_1.append(sum_syl)
     return len(set(list_1)) <= 1
 
