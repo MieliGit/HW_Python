@@ -1,5 +1,7 @@
+
 def get_data():
-    return None
+    with open('b:\Work\HW_Python\HW_8\contact.txt', 'r', encoding='utf-8') as book:
+        print(book.read())
 
 
 def add_contact():

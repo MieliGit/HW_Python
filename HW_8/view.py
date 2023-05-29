@@ -1,3 +1,4 @@
+
 def hiuser():
     return None
 
@@ -13,14 +14,10 @@ def menu():
 
 
 def contacts_list(data):
-    return None
+    return data
 
 
 def output_contact(contact):
-    return None
-
-
-def error():
     return None
 
 
@@ -30,6 +27,10 @@ def success():
 
 def fail():
     return None
+
+
+def error():
+    print("Ошибка, введены неверные данные")
 
 
 if __name__ == '__main__':
