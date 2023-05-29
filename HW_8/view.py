@@ -1,4 +1,7 @@
 
+import model
+
+
 def hiuser():
     return None
 
@@ -17,7 +20,12 @@ def contacts_list(data):
     return data
 
 
+def add_contact(fio, phone_number):
+    print(f"Добавлена запись : {fio} {phone_number}\n")
+
+
 def output_contact(contact):
+
     return None
 
 

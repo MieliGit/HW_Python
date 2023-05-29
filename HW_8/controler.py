@@ -19,7 +19,10 @@ def start():
             view.output_contact(result_search)
 
         elif ans == '3':
-            model.add_contact()
+            fio = input("Введите ФИО через пробел: ")
+            phone_number = input("Введите номер телефона: ")
+            model.add_contact(fio, phone_number)
+            view.add_contact(fio, phone_number)
 
         elif ans == '4':
             contact = input("Введите данные котакта через пробел: ")
@@ -38,6 +41,7 @@ def start():
                 view.fail(del_result)
 
         elif ans == '6':
+            print('')
             break
 
         else:
