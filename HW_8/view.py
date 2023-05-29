@@ -22,10 +22,12 @@ def output_contact(contact):
 
 
 def success():
+    print("Действие произведено успешно")
     return None
 
 
 def fail():
+    print("Действие не увенчалось успехом")
     return None
 
 

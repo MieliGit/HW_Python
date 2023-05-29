@@ -19,12 +19,7 @@ def start():
             view.output_contact(result_search)
 
         elif ans == '3':
-            contact = input("Введите данные котакта через пробел: ")
-            add_result = model.add_contact(contact)
-            if add_result:
-                view.success(add_result)
-            else:
-                view.fail(add_result)
+            model.add_contact()
 
         elif ans == '4':
             contact = input("Введите данные котакта через пробел: ")
