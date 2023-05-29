@@ -25,12 +25,18 @@ def start():
             view.add_contact(fio, phone_number)
 
         elif ans == '4':
-            contact = input("Введите данные котакта через пробел: ")
-            change = model.change_contact(contact)
-            if change:
-                view.success(change)
+            data = model.get_data()
+            view.contacts_list(data)
+            id_contact = int(
+                input("Введите строку, которую хотите изменить: "))
+
+            if id_contact < 1:
+                view.error()
             else:
-                view.fail(change)
+                fio = input("Введите новое ФИО через пробел: ")
+                phone_number = input("Введите новый номер телефона: ")
+                model.change_contact(id_contact, fio, phone_number)
+                view.add_contact(fio, phone_number)
 
         elif ans == '5':
             contact = input("Введите данные котакта через пробел: ")
@@ -41,7 +47,6 @@ def start():
                 view.fail(del_result)
 
         elif ans == '6':
-            print('')
             break
 
         else:
