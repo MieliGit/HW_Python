@@ -9,7 +9,7 @@ def start():
 
         view.menu()
         ans = input('Введите действие, которое хотели бы выполнить: ')
-        
+
         if ans == '1':
             data = model.get_data()
             view.contacts_list(data)
@@ -28,6 +28,22 @@ def start():
                 view.fail(add_result)
 
         elif ans == '4':
+            contact = input("Введите данные котакта через пробед: ")
+            change = model.change_contact(contact)
+            if change:
+                view.success(change)
+            else:
+                view.fail(change)
+
+        elif ans == '5':
+            contact = input("Введите данные котакта через пробед: ")
+            del_result = model.del_contact(contact)
+            if del_result:
+                view.success(del_result)
+            else:
+                view.fail(del_result)
+
+        elif ans == '6':
             break
 
         else:
