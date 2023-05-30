@@ -1,9 +1,6 @@
 
-import model
-
-
 def hiuser():
-    return None
+    print("Здравствуйте, в этом справочнике вы сможете выполнить следующте действия\n")
 
 
 def menu():
@@ -24,19 +21,12 @@ def add_contact(fio, phone_number):
     print(f"Добавлена запись : {fio} {phone_number}\n")
 
 
-def output_contact(contact):
-
-    return None
-
-
-def success():
-    print("Действие произведено успешно")
-    return None
+def output_contact(res):
+    print(res)
 
 
-def fail():
-    print("Действие не увенчалось успехом")
-    return None
+def del_c():
+    print("Контакт успешно удален")
 
 
 def error():

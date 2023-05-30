@@ -14,9 +14,9 @@ def start():
             view.contacts_list(data)
 
         elif ans == '2':
-            contact = input("Введите данные котакта через пробел: ")
-            result_search = model.search_contact(contact)
-            view.output_contact(result_search)
+            data = input("Введите данные котакта, которые вам известно: ")
+            res = model.search_contact_read(data)
+            view.output_contact(res)
 
         elif ans == '3':
             fio = input("Введите ФИО через пробел: ")
@@ -39,14 +39,17 @@ def start():
                 view.add_contact(fio, phone_number)
 
         elif ans == '5':
-            contact = input("Введите данные котакта через пробел: ")
-            del_result = model.del_contact(contact)
-            if del_result:
-                view.success(del_result)
+            data = model.get_data()
+            id_contact = int(
+                input("Введите строку, которую хотите удалить: "))
+            if id_contact < 1:
+                view.error()
             else:
-                view.fail(del_result)
+                model.del_contact(id_contact)
+                view.del_c()
 
         elif ans == '6':
+            print("Всего доброго!")
             break
 
         else:
