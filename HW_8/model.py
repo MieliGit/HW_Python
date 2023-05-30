@@ -38,10 +38,7 @@ def search_contact_read(search_info):
         info = []
         for (res) in data:
             if search_info in res:
-                info = res
-                # Можно написать здесь print(info), тогда при запуске выведутся все контакты по запросу.
-                # Пытался придумать, как это сделать, чтобы вывод был чисто черзе файл view, но в таком
-                # случае, получается только вывод одного
+                info.append(res)
         return info
 
 
